@@ -1,4 +1,4 @@
-package Labka;
+package Labka.Labka_4;
 
 interface IWorkable {
     void work();

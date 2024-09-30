@@ -1,4 +1,4 @@
-package Labka;
+package Labka.Labka_4;
 
 public class Test_Notification {
     public static void main(String[] args) {

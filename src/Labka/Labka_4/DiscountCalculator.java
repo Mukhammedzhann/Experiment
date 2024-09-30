@@ -1,4 +1,4 @@
-package Labka;
+package Labka.Labka_4;
 
 abstract class DiscountStrategy {
     public abstract double calculateDiscount(double amount);
