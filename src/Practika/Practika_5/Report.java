@@ -58,24 +58,53 @@ class LetterCreator implements DocumentCreator{
     }
 }
 
-enum DocType{
-     Repurt, Resume, Letter
+class InvoiceCreator implements DocumentCreator {
+    @Override
+    public IDocument CreateDocument() {
+        return new Invoice();
+    }
 }
-/*class Program{
-public static IDocument GetDocument(DocType type){
-    DocumentCreator creator = null;
-    IDocument document = null;
-    switch (type) {
-        case DocType.Repurt:
-            creator = new ReportCreator();
-            break;
-        case DocType.Resume:
-            creator = new ResumeCreator();
 
-        case DocType.Letter:
-            creator = new LetterCreator();
-            break;
+
+enum DocType {
+    REPORT, RESUME, LETTER, INVOICE
+}
+
+class Program {
+    public static IDocument getDocument(DocType type) {
+        DocumentCreator creator = null;
+        switch (type) {
+            case REPORT:
+                creator = new ReportCreator();
+                break;
+            case RESUME:
+                creator = new ResumeCreator();
+                break;
+            case LETTER:
+                creator = new LetterCreator();
+                break;
+            case INVOICE:
+                creator = new InvoiceCreator();
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid document type");
+        }
+        return creator.CreateDocument();
+    }
+
+    public static void main(String[] args) {
+        IDocument reportDoc = getDocument(DocType.REPORT);
+        reportDoc.open();
+
+        IDocument resumeDoc = getDocument(DocType.RESUME);
+        resumeDoc.open();
+
+        IDocument letterDoc = getDocument(DocType.LETTER);
+        letterDoc.open();
+
+        IDocument invoiceDoc = getDocument(DocType.INVOICE);
+        invoiceDoc.open();
     }
 
 }
-}*/
+
