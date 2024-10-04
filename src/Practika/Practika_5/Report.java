@@ -5,7 +5,7 @@ import java.lang.reflect.Type;
 interface IDocument{
     void open();
 }
-public class Report implements IDocument {
+ class Report implements IDocument {
     @Override
     public void open() {
         System.out.println("Opening a Report doc.");
