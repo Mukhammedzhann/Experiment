@@ -1,7 +1,5 @@
 package Labka.Labka_5;
 
-
-
 interface Transport {
     void Move();
     void FuelUp();
