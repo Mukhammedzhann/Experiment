@@ -1,5 +1,5 @@
-package Practika.Practika_5_2;
-import java.util.Scanner;
+package Home_work.Practika_5_2;
+
 interface IVehicle{
     void Drive();
     void Refuel();

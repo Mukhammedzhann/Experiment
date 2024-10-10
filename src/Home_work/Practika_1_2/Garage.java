@@ -1,4 +1,4 @@
-package Practika.Practika_1_2;
+package Home_work.Practika_1_2;
 
 import java.util.ArrayList;
 import java.util.List;

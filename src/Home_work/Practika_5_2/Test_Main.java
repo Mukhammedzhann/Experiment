@@ -1,4 +1,4 @@
-package Practika.Practika_5_2;
+package Home_work.Practika_5_2;
 import java.util.Scanner;
 
 public class Test_Main {

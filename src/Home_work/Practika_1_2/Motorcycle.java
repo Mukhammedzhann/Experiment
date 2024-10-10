@@ -1,4 +1,4 @@
-package Practika.Practika_1_2;
+package Home_work.Practika_1_2;
 public class Motorcycle extends Vehicle {
     private String bodyType;
     private boolean hasSidecar;
