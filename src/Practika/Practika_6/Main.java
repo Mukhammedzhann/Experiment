@@ -32,6 +32,7 @@ class Logger{
             String logMessage = level + " | " + message + System.lineSeparator();
 
             try {
+
                 Files.write(filePath, logMessage.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } catch (IOException e) {
                 e.printStackTrace();
